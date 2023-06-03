@@ -6,7 +6,7 @@
 /*   By: asaber <asaber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 21:42:56 by asaber            #+#    #+#             */
-/*   Updated: 2023/05/31 21:51:17 by asaber           ###   ########.fr       */
+/*   Updated: 2023/06/01 16:46:49 by asaber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,6 @@ t_philo	*creat_philos(int n_philo)
 
 int	main(int argc, char **argv)
 {
-	// int			i;
-	// int			j;
 	t_philo		*philos;
 	t_infos		*data;
 

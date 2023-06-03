@@ -6,7 +6,7 @@
 /*   By: asaber <asaber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 21:48:12 by asaber            #+#    #+#             */
-/*   Updated: 2023/05/31 17:17:41 by asaber           ###   ########.fr       */
+/*   Updated: 2023/06/03 22:18:26 by asaber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ typedef struct infos
 	int				time_to_eat;
 	int				time_to_sleep;
 	int				must_eat;
-	pthread_mutex_t	*died;
+	pthread_mutex_t	*print;
+	pthread_mutex_t	*death;
 	u_int64_t		start;
 }		t_infos;
 

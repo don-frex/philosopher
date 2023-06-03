@@ -6,7 +6,7 @@
 /*   By: asaber <asaber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 18:32:29 by asaber            #+#    #+#             */
-/*   Updated: 2023/05/31 17:27:43 by asaber           ###   ########.fr       */
+/*   Updated: 2023/06/03 22:19:34 by asaber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,8 @@ t_infos	*init_data(int argc, char **argv, t_philo *philos)
 	int		count;
 
 	data = malloc(sizeof(t_infos));
-	data->died = malloc(sizeof(pthread_mutex_t));
+	data->print = malloc(sizeof(pthread_mutex_t));
+	data->death = malloc(sizeof(pthread_mutex_t));
 	if (argc == 6)
 		data->must_eat = ft_atoi(argv[5]);
 	else
@@ -48,8 +49,8 @@ t_infos	*init_data(int argc, char **argv, t_philo *philos)
 	data->time_to_die = ft_atoi(argv[2]);
 	data->time_to_eat = ft_atoi(argv[3]);
 	data->time_to_sleep = ft_atoi(argv[4]);
-	pthread_mutex_init(data->died, NULL);
-	data->start = get_time();
+	pthread_mutex_init(data->death, NULL);
+	pthread_mutex_init(data->print, NULL);
 	count = 0;
 	while (count++ < data->n_of_philos)
 	{
