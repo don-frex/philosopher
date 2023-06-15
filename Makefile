@@ -6,7 +6,7 @@
 #    By: asaber <asaber@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/31 21:48:43 by asaber            #+#    #+#              #
-#    Updated: 2023/06/03 22:52:38 by asaber           ###   ########.fr        #
+#    Updated: 2023/06/15 23:04:55 by asaber           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ RM = rm -rf
 all: $(NAME)
 
 $(NAME) : $(OBJS)
-	$(CC) $(CFLAGS) $^ -o $(NAME)
+	$(CC)  $(CFLAGS) $^ -o $(NAME)
 
 clean:
 	$(RM) $(OBJS) $(OBJSB)
